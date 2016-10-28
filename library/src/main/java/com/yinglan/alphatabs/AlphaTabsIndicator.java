@@ -51,7 +51,7 @@ public class AlphaTabsIndicator extends LinearLayout {
 
     public void setViewPager(ViewPager mViewPager) {
         this.mViewPager = mViewPager;
-        isInit();
+        init();
     }
 
     public void setOnTabChangedListner(OnTabChangedListner listner) {
