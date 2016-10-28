@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         alphaTabsIndicator.getTabView(1).showNumber(888);
         alphaTabsIndicator.getTabView(2).showNumber(88);
         alphaTabsIndicator.getTabView(3).showPoint();
-
     }
 
 
