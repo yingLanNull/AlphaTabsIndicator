@@ -39,5 +39,11 @@ public class SencondActivity extends AppCompatActivity {
                 Toast.makeText(SencondActivity.this, "select~" + tabNum, Toast.LENGTH_SHORT).show();
             }
         });
+
+        AlphaTabsIndicator alphaTabsIndicator3 = (AlphaTabsIndicator) findViewById(R.id.alphaIndicator3);
+        alphaTabsIndicator3.getTabView(0).showNumber(8);
+        alphaTabsIndicator3.getTabView(1).showNumber(88);
+        alphaTabsIndicator3.getTabView(2).showNumber(888);
+        alphaTabsIndicator3.getTabView(3).showPoint();
     }
 }

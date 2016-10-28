@@ -227,4 +227,67 @@
             app:textColorNormal="#999999"
             app:textColorSelected="#46c01b" />
     </com.yinglan.alphatabs.AlphaTabsIndicator>
+
+
+    <com.yinglan.alphatabs.AlphaTabsIndicator
+        android:id="@+id/alphaIndicator3"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:badgeBackgroundColor="@android:color/holo_blue_dark"
+            app:tabIconNormal="@mipmap/home_normal"
+            app:tabIconSelected="@mipmap/home_selected"
+            app:tabText="微信"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:badgeBackgroundColor="@android:color/black"
+            app:tabIconNormal="@mipmap/category_normal"
+            app:tabIconSelected="@mipmap/category_selected"
+            app:tabText="通讯录"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:badgeBackgroundColor="@android:color/holo_green_light"
+            app:tabIconNormal="@mipmap/service_normal"
+            app:tabIconSelected="@mipmap/service_selected"
+            app:tabText="发现"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b" />
+
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:badgeBackgroundColor="@color/colorPrimary"
+            app:tabIconNormal="@mipmap/mine_normal"
+            app:tabIconSelected="@mipmap/mine_selected"
+            app:tabText="我"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b" />
+    </com.yinglan.alphatabs.AlphaTabsIndicator>
 </LinearLayout>
