@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ViewPager mViewPger = (ViewPager) findViewById(R.id.mViewPager);
         MainAdapter mainAdapter = new MainAdapter(getSupportFragmentManager());
-
         mViewPger.setAdapter(mainAdapter);
         mViewPger.addOnPageChangeListener(mainAdapter);
 
