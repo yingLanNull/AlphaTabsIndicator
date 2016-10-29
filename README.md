@@ -8,7 +8,7 @@
 ## Gif 动画
 ![1](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/show.gif)
 
-## Screenshot 图片
+## Screenshot 截图
 ![1](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/Screenshot1.png)
 ![2](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/Screenshot2.png)
 ![3](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/Screenshot3.png)
