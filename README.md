@@ -113,14 +113,14 @@ dependencies {
 
 #### In Code
 
-#####AlphaTabView 方法
+#####AlphaTabView 主要方法
 ```
         mAlphaTabView.showNumber(int i); //显示数子角标
         mAlphaTabView.showPoint();       //显示小红点
         mAlphaTabView.removeShow();      //移除角标
 ```
 
-#####AlphaTabsIndicator 方法
+#####AlphaTabsIndicator 主要方法
 ```
         mAlphaTabsIndicator.setViewPager(ViewPager mViewPger);                     //设置ViewPager
         mAlphaTabsIndicator.setOnTabChangedListner(OnTabChangedListner listner);   //设置底部tab点击监听
