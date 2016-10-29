@@ -31,7 +31,6 @@ public class SencondActivity extends AppCompatActivity {
         alphaTabsIndicator2.getTabView(1).showNumber(88);
         alphaTabsIndicator2.getTabView(2).showNumber(888);
         alphaTabsIndicator2.getTabView(3).showPoint();
-
         //tab选中的监听回调
         alphaTabsIndicator2.setOnTabChangedListner(new OnTabChangedListner() {
             @Override
