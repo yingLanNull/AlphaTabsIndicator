@@ -131,7 +131,7 @@ dependencies {
 本库是在征得[jeasonlzy](https://github.com/jeasonlzy)的许可后,在其[AlphaIndicatorView](https://github.com/jeasonlzy/AlphaIndicatorView)基础上做的易用性改进,感谢,现持续开源。
 ##改进项主要有:
 1. 增加角标,使其更接近微信底部tab;
-1. 对角标的大小进行动态控制,会更具tab高度自适应;
+1. 对角标的大小进行动态控制,会根据tab高度自适应;
 1. 对使用要求限制适当降低,可以在不绑定viewpager的情况下使用。
 1. 增加点击tab的监听回调。
 1. 增加在代码mViewPager.setCurrentItem(i)控制状态下tab联动。
