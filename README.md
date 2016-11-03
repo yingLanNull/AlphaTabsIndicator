@@ -115,9 +115,9 @@ dependencies {
 
 #####AlphaTabView 主要方法
 ```
-        mAlphaTabView.showNumber(int i); //显示数子角标
+        mAlphaTabView.showNumber(int i); //显示数字角标
         mAlphaTabView.showPoint();       //显示小红点
-        mAlphaTabView.removeShow();      //移除角标
+        mAlphaTabView.removeShow();      //移除当前角标
 ```
 
 #####AlphaTabsIndicator 主要方法
