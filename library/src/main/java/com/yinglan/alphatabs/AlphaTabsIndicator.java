@@ -47,6 +47,12 @@ public class AlphaTabsIndicator extends LinearLayout {
 
     public AlphaTabsIndicator(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        post(new Runnable() {
+            @Override
+            public void run() {
+                isInit();
+            }
+        });
     }
 
     public void setViewPager(ViewPager mViewPager) {
