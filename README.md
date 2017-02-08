@@ -21,7 +21,7 @@
 #### Gradle 配置
 ```
 dependencies {
-    compile 'com.yinglan.alphatabs:library:1.0.2'
+    compile 'com.yinglan.alphatabs:library:1.0.3'
 }
 ```
 
@@ -131,6 +131,7 @@ dependencies {
 ##改进项主要有:
 1. 增加角标,使其更接近微信底部tab;
 1. 对角标的大小进行动态控制,会根据tab高度自适应;
-1. 对使用要求限制适当降低,可以在不绑定viewpager的情况下使用。
-1. 增加点击tab的监听回调。
-1. 增加在代码mViewPager.setCurrentItem(i)控制状态下tab联动。
+1. 对使用要求限制适当降低,可以在不绑定viewpager的情况下使用;
+1. 增加点击tab的监听回调;
+1. 增加在代码mViewPager.setCurrentItem(i)控制状态下tab联动;
+1. 修复在未设置状态下不能点击Tab的问题。
