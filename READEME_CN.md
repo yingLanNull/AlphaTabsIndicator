@@ -1,35 +1,35 @@
 # AlphaTabsIndicator
-High imitation microblogging at the bottom of the status bar of the lightweight library for most of the bottom status bar application requirements.
-## Abstract
-Imitation WeChat at the bottom of the tab label, slide the color gradient, increase the angle mark function, the use of extremely simple, only two lines of code.
+高仿微信底部状态栏的轻量级库，适用多数底部状态栏应用需求
+## 摘要
+仿微信底部tab标签，滑动的时候颜色渐变，增加角标功能, 使用极其简单，只需要两行代码。
 
-## Chinese Documents
-[查看中文文档](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/READEME_CN.md)
+## 英文文档
+[View English Documents](https://github.com/yingLanNull/AlphaTabsIndicator)
 
-## Gif
+## 动画
 ![1](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/show.gif)
 
-## Screenshot
+## 截图
 ![1](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/Screenshot1.png)
 ![2](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/Screenshot2.png)
 ![3](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/Screenshot3.png)
 ![4](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/Screenshot4.png)
 
-## Demo
-[Download Demo](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/app-debug.apk)
+## 下载APK体验
+[点击下载](https://github.com/yingLanNull/AlphaTabsIndicator/blob/master/show/app-debug.apk)
 
-## Usage
-### Step 1
-#### Gradle
+## 使用方法
+### 步骤 1
+#### Gradle 配置
 ```
 dependencies {
     compile 'com.yinglan.alphatabs:library:1.0.3'
 }
 ```
 
-### Step 2
+### 步骤 2
 
-#### In Layout
+#### 布局使用
 ```
 	        <com.yinglan.alphatabs.AlphaTabsIndicator
                 android:id="@+id/alphaIndicator"
@@ -70,70 +70,70 @@ dependencies {
 
             </com.yinglan.alphatabs.AlphaTabsIndicator>                                //模式
 ```
-#### Function and parameter definition
+#### 功能与参数定义
 
 <table>
   <tdead>
     <tr>
-      <th align="center">Parameters</th>
-      <th align="center">Meaning</th>
+      <th align="center">配置参数</th>
+      <th align="center">参数含义</th>
     </tr>
   </tdead>
   <tbody>
     <tr>
       <td align="center">tabIconNormal</td>
-      <td align="center">Unselected icon</td>
+      <td align="center">未选中的图标</td>
     </tr>
     <tr>
       <td align="center">tabIconSelected</td>
-      <td align="center">Already selected icon</td>
+      <td align="center">已经选中的图标</td>
     </tr>
     <tr>
       <td align="center">tabText</td>
-      <td align="center">Tab tag text</td>
+      <td align="center">tab标签的文字</td>
     </tr>
     <tr>
       <td align="center">tabTextSize</td>
-      <td align="center">Tab The size of the label</td>
+      <td align="center">tab标签的文字大小</td>
     </tr>
     <tr>
       <td align="center">textColorNormal</td>
-      <td align="center">Unchecked text color</td>
+      <td align="center">未选中的文字颜色</td>
     </tr>
     <tr>
       <td align="center">textColorSelected</td>
-      <td align="center">Selected text color</td>
+      <td align="center">已选中的文字颜色</td>
     </tr>
     <tr>
         <td align="center">badgeBackgroundColor</td>
-        <td align="center">Corner background color, default red</td>
+        <td align="center">角标背景色,默认红色</td>
      </tr>
   </tbody>
 </table>
 
 
-#### In Code
+#### 代码
 
-##### AlphaTabView Main Method
+##### AlphaTabView 主要方法
 ```
-        mAlphaTabView.showNumber(int i); //Display digital remind
-        mAlphaTabView.showPoint();       //Show little red dot
-        mAlphaTabView.removeShow();      //Remove the digital remind
-```
-
-##### AlphaTabsIndicator Main Method
-```
-        mAlphaTabsIndicator.setViewPager(ViewPager mViewPger);                     //Set ViewPager
-        mAlphaTabsIndicator.setOnTabChangedListner(OnTabChangedListner listner);   //Settings TAB at the bottom click to monitor
-        mAlphaTabsIndicator.removeAllBadge();                                      //Remove all remind the TAB
+        mAlphaTabView.showNumber(int i); //显示数字角标
+        mAlphaTabView.showPoint();       //显示小红点
+        mAlphaTabView.removeShow();      //移除当前角标
 ```
 
-#### Instructions
-The library is in the permission of the Mr [jeasonlzy](https://github.com/jeasonlzy)permission,on the basis of his [AlphaIndicatorView](https://github.com/jeasonlzy/AlphaIndicatorView) do usability improvements, thank you, now continue to open source.
-## The main improvement:
-1. Increase the Angle of standard, make it more close to WeChat TAB at the bottom;
-1. The diagonal mark size for dynamic control, adaptive according to the height of the TAB;
-1. Limit the appropriate to reduce to use requirement, can be used in the case of not binding viewpager;
-1. Increase click on the TAB to monitor the callback;
-1. Increase in code mViewPager. SetCurrentItem (i) TAB linkage control condition;
-1. Repair is not set in a state of not click Tab.
+##### AlphaTabsIndicator 主要方法
+```
+        mAlphaTabsIndicator.setViewPager(ViewPager mViewPger);                     //设置ViewPager
+        mAlphaTabsIndicator.setOnTabChangedListner(OnTabChangedListner listner);   //设置底部tab点击监听
+        mAlphaTabsIndicator.removeAllBadge();                                      //移除所有tab的角标
+```
+
+#### 说明
+本库是在征得[jeasonlzy](https://github.com/jeasonlzy)的许可后,在其[AlphaIndicatorView](https://github.com/jeasonlzy/AlphaIndicatorView)基础上做的易用性改进,感谢,现持续开源。
+## 改进项主要有:
+1. 增加角标,使其更接近微信底部tab;
+1. 对角标的大小进行动态控制,会根据tab高度自适应;
+1. 对使用要求限制适当降低,可以在不绑定viewpager的情况下使用;
+1. 增加点击tab的监听回调;
+1. 增加在代码mViewPager.setCurrentItem(i)控制状态下tab联动;
+1. 修复在未设置状态下不能点击Tab的问题。
