@@ -26,11 +26,15 @@ public class SencondActivity extends AppCompatActivity {
         alphaTabsIndicator1.getTabView(2).showNumber(888);
         alphaTabsIndicator1.getTabView(3).showPoint();
 
+        alphaTabsIndicator1.setTabCurrenItem(1);
+
         AlphaTabsIndicator alphaTabsIndicator2 = (AlphaTabsIndicator) findViewById(R.id.alphaIndicator2);
         alphaTabsIndicator2.getTabView(0).showNumber(8);
         alphaTabsIndicator2.getTabView(1).showNumber(88);
         alphaTabsIndicator2.getTabView(2).showNumber(888);
         alphaTabsIndicator2.getTabView(3).showPoint();
+
+        alphaTabsIndicator2.setTabCurrenItem(2);
         //tab选中的监听回调
         alphaTabsIndicator2.setOnTabChangedListner(new OnTabChangedListner() {
             @Override
@@ -44,5 +48,7 @@ public class SencondActivity extends AppCompatActivity {
         alphaTabsIndicator3.getTabView(1).showNumber(88);
         alphaTabsIndicator3.getTabView(2).showNumber(888);
         alphaTabsIndicator3.getTabView(3).showPoint();
+
+        alphaTabsIndicator3.setTabCurrenItem(3);
     }
 }

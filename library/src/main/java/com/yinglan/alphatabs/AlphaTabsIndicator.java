@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 /**
@@ -70,20 +70,29 @@ public class AlphaTabsIndicator extends LinearLayout {
         return mTabViews.get(mCurrentItem);
     }
 
-    public AlphaTabView getTabView(int p) {
+    public AlphaTabView getTabView(int tabIndex) {
         isInit();
-        return mTabViews.get(p);
+        return mTabViews.get(tabIndex);
     }
 
-    public void removeAllBadge(){
+    public void removeAllBadge() {
         isInit();
-        for (AlphaTabView alphaTabView : mTabViews){
+        for (AlphaTabView alphaTabView : mTabViews) {
             alphaTabView.removeShow();
         }
     }
 
+    public void setTabCurrenItem(int tabIndex) {
+        if (tabIndex < mChildCounts && tabIndex > -1) {
+            mTabViews.get(tabIndex).performClick();
+        } else {
+            throw new IllegalArgumentException("IndexOutOfBoundsException");
+        }
+
+    }
+
     private void isInit() {
-        if(!ISINIT){
+        if (!ISINIT) {
             init();
         }
     }
@@ -98,7 +107,7 @@ public class AlphaTabsIndicator extends LinearLayout {
                 throw new NullPointerException("viewpager的adapter为null");
             }
             if (mViewPager.getAdapter().getCount() != mChildCounts) {
-                throw new IllegalArgumentException("LinearLayout的子View数量必须和ViewPager条目数量一致");
+                throw new IllegalArgumentException("子View数量必须和ViewPager条目数量一致");
             }
             //对ViewPager添加监听
             mViewPager.addOnPageChangeListener(new MyOnPageChangeListener());

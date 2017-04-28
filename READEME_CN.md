@@ -23,7 +23,7 @@
 #### Gradle 配置
 ```
 dependencies {
-    compile 'com.yinglan.alphatabs:library:1.0.3'
+    compile 'com.yinglan.alphatabs:library:1.0.5'
 }
 ```
 
@@ -126,6 +126,7 @@ dependencies {
         mAlphaTabsIndicator.setViewPager(ViewPager mViewPger);                     //设置ViewPager
         mAlphaTabsIndicator.setOnTabChangedListner(OnTabChangedListner listner);   //设置底部tab点击监听
         mAlphaTabsIndicator.removeAllBadge();                                      //移除所有tab的角标
+        mAlphaTabsIndicator.setTabCurrenItem(int tabIndex);                        //设置tab选项
 ```
 
 #### 说明
@@ -135,5 +136,6 @@ dependencies {
 1. 对角标的大小进行动态控制,会根据tab高度自适应;
 1. 对使用要求限制适当降低,可以在不绑定viewpager的情况下使用;
 1. 增加点击tab的监听回调;
+1. 增加在不绑定ViewPager时可设置tab选项;
 1. 增加在代码mViewPager.setCurrentItem(i)控制状态下tab联动;
 1. 修复在未设置状态下不能点击Tab的问题。

@@ -23,7 +23,7 @@ Imitation WeChat at the bottom of the tab label, slide the color gradient, incre
 #### Gradle
 ```
 dependencies {
-    compile 'com.yinglan.alphatabs:library:1.0.3'
+    compile 'com.yinglan.alphatabs:library:1.0.5'
 }
 ```
 
@@ -126,6 +126,7 @@ dependencies {
         mAlphaTabsIndicator.setViewPager(ViewPager mViewPger);                     //Set ViewPager
         mAlphaTabsIndicator.setOnTabChangedListner(OnTabChangedListner listner);   //Settings TAB at the bottom click to monitor
         mAlphaTabsIndicator.removeAllBadge();                                      //Remove all remind the TAB
+        mAlphaTabsIndicator.setTabCurrenItem(int tabIndex);                        //Settings TAB option
 ```
 
 #### Instructions
@@ -134,6 +135,7 @@ The library is in the permission of the Mr [jeasonlzy](https://github.com/jeason
 1. Increase the Angle of standard, make it more close to WeChat TAB at the bottom;
 1. The diagonal mark size for dynamic control, adaptive according to the height of the TAB;
 1. Limit the appropriate to reduce to use requirement, can be used in the case of not binding viewpager;
+1. When without binding ViewPager Settings TAB option;
 1. Increase click on the TAB to monitor the callback;
 1. Increase in code mViewPager. SetCurrentItem (i) TAB linkage control condition;
 1. Repair is not set in a state of not click Tab.
