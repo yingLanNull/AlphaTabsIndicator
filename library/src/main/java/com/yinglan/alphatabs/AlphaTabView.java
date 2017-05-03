@@ -85,6 +85,7 @@ public class AlphaTabView extends View {
         mTextColorNormal = a.getColor(R.styleable.AlphaTabView_textColorNormal, mTextColorNormal);
         mTextColorSelected = a.getColor(R.styleable.AlphaTabView_textColorSelected, mTextColorSelected);
         mBadgeBackgroundColor = a.getColor(R.styleable.AlphaTabView_badgeBackgroundColor, mBadgeBackgroundColor);
+        mPadding = (int) a.getDimension(R.styleable.AlphaTabView_paddingTexwithIcon, mPadding);
         a.recycle();
         initText();
     }

@@ -23,7 +23,7 @@
 #### Gradle 配置
 ```
 dependencies {
-    compile 'com.yinglan.alphatabs:library:1.0.5'
+    compile 'com.yinglan.alphatabs:library:1.0.6'
 }
 ```
 
@@ -49,7 +49,8 @@ dependencies {
                     app:tabTextSize=""
                     app:textColorNormal=""
                     app:textColorSelected=""
-                    app:badgeBackgroundColor=""/>
+                    app:badgeBackgroundColor=""
+                    app:paddingTexwithIcon=""/>
 
                 <com.yinglan.alphatabs.AlphaTabView
                     android:layout_width="0dp"
@@ -63,7 +64,8 @@ dependencies {
                     app:tabTextSize=""
                     app:textColorNormal=""
                     app:textColorSelected=""
-                    app:badgeBackgroundColor=""/>
+                    app:badgeBackgroundColor=""
+                    app:paddingTexwithIcon=""/>
 
                     、、、、
                     、、、、
@@ -105,8 +107,12 @@ dependencies {
       <td align="center">已选中的文字颜色</td>
     </tr>
     <tr>
-        <td align="center">badgeBackgroundColor</td>
-        <td align="center">角标背景色,默认红色</td>
+       <td align="center">badgeBackgroundColor</td>
+       <td align="center">角标背景色,默认红色</td>
+     </tr>
+     <tr>
+       <td align="center">paddingTexwithIcon</td>
+       <td align="center">图标和文字之间的距离</td>
      </tr>
   </tbody>
 </table>
@@ -136,6 +142,7 @@ dependencies {
 1. 对角标的大小进行动态控制,会根据tab高度自适应;
 1. 对使用要求限制适当降低,可以在不绑定viewpager的情况下使用;
 1. 增加点击tab的监听回调;
+1. 图标和文字之间的距离可以配置,默认为5;
 1. 增加在不绑定ViewPager时可设置tab选项;
 1. 增加在代码mViewPager.setCurrentItem(i)控制状态下tab联动;
 1. 修复在未设置状态下不能点击Tab的问题。
