@@ -136,7 +136,7 @@ dependencies {
 ```
 
 #### Instructions
-The library is in the permission of the Mr [jeasonlzy](https://github.com/jeasonlzy)permission,on the basis of his [AlphaIndicatorView](https://github.com/jeasonlzy/AlphaIndicatorView) do usability improvements, thank you, now continue to open source.
+The library is in the permission of the Mr [jeasonlzy](https://github.com/jeasonlzy) permission,on the basis of his [AlphaIndicatorView](https://github.com/jeasonlzy/AlphaIndicatorView) do usability improvements, thank you, now continue to open source.
 ## The main improvement:
 1. Increase the Angle of standard, make it more close to WeChat TAB at the bottom;
 1. The diagonal mark size for dynamic control, adaptive according to the height of the TAB;
