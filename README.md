@@ -23,7 +23,7 @@ Imitation WeChat at the bottom of the tab label, slide the color gradient, incre
 #### Gradle
 ```
 dependencies {
-    compile 'com.yinglan.alphatabs:library:1.0.6'
+    compile 'com.yinglan.alphatabs:library:1.0.7'
 }
 ```
 

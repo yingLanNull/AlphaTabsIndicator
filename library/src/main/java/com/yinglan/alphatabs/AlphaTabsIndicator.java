@@ -204,6 +204,10 @@ public class AlphaTabsIndicator extends LinearLayout {
         if (state instanceof Bundle) {
             Bundle bundle = (Bundle) state;
             mCurrentItem = bundle.getInt(STATE_ITEM);
+            if (null == mTabViews || mTabViews.isEmpty()) {
+                super.onRestoreInstanceState(state);
+                return;
+            }
             //重置所有按钮状态
             resetState();
             //恢复点击的条目颜色
