@@ -205,7 +205,7 @@ public class AlphaTabsIndicator extends LinearLayout {
             Bundle bundle = (Bundle) state;
             mCurrentItem = bundle.getInt(STATE_ITEM);
             if (null == mTabViews || mTabViews.isEmpty()) {
-                super.onRestoreInstanceState(state);
+                super.onRestoreInstanceState(bundle.getParcelable(STATE_INSTANCE));
                 return;
             }
             //重置所有按钮状态

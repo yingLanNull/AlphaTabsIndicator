@@ -23,7 +23,7 @@
 #### Gradle 配置
 ```
 dependencies {
-    compile 'com.yinglan.alphatabs:library:1.0.7'
+    compile 'com.yinglan.alphatabs:library:1.0.8'
 }
 ```
 
