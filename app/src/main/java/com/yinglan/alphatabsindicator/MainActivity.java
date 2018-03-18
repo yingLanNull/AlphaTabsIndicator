@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.yinglan.alphatabs.AlphaTabsIndicator;
+import com.yinglan.alphatabs.OnTabChangedListner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +22,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewPager mViewPger = (ViewPager) findViewById(R.id.mViewPager);
+        final ViewPager mViewPger = (ViewPager) findViewById(R.id.mViewPager);
         MainAdapter mainAdapter = new MainAdapter(getSupportFragmentManager());
         mViewPger.setAdapter(mainAdapter);
-        mViewPger.addOnPageChangeListener(mainAdapter);
 
         alphaTabsIndicator = (AlphaTabsIndicator) findViewById(R.id.alphaIndicator);
         alphaTabsIndicator.setViewPager(mViewPger);
+        alphaTabsIndicator.setOnTabChangedListner(new OnTabChangedListner() {
+            @Override
+            public void onTabSelected(int tabNum) {
+                mViewPger.setCurrentItem(tabNum,true);
+            }
+        });
 
         alphaTabsIndicator.getTabView(0).showNumber(6);
         alphaTabsIndicator.getTabView(1).showNumber(888);
@@ -36,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private class MainAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
+    private class MainAdapter extends FragmentPagerAdapter {
 
         private List<Fragment> fragments = new ArrayList<>();
         private String[] titles = {"微信", "通讯录", "发现", "我"};
@@ -59,25 +65,5 @@ public class MainActivity extends AppCompatActivity {
             return fragments.size();
         }
 
-        @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-        }
-
-        @Override
-        public void onPageSelected(int position) {
-            if (0 == position) {
-                alphaTabsIndicator.getTabView(0).showNumber(alphaTabsIndicator.getTabView(0).getBadgeNumber() - 1);
-            } else if (2 == position) {
-                alphaTabsIndicator.getCurrentItemView().removeShow();
-            } else if (3 == position) {
-                alphaTabsIndicator.removeAllBadge();
-            }
-        }
-
-        @Override
-        public void onPageScrollStateChanged(int state) {
-
-        }
     }
 }
