@@ -130,10 +130,25 @@ public class AlphaTabsIndicator extends LinearLayout {
     private class MyOnPageChangeListener extends ViewPager.SimpleOnPageChangeListener {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            //滑动时的透明度动画
-            if (positionOffset > 0) {
-                mTabViews.get(position).setIconAlpha(1 - positionOffset);
-                mTabViews.get(position + 1).setIconAlpha(positionOffset);
+            //work well on clicked
+            if(positionOffset > 0) {
+                for(int i = 0 ; i < mTabViews.size();i++){
+                    if(position == i){
+                        mTabViews.get(i).setIconAlpha(1 - positionOffset);
+                        for(int j = 0; j < mTabViews.size();j++){
+                            if(i != j){
+                                if(i + 1 == j){
+                                    mTabViews.get(j).setIconAlpha(positionOffset);
+                                } else if(i - 1 == j) {
+                                    if(j + 2 == mTabViews.size()) mTabViews.get(j).setIconAlpha(positionOffset);
+                                    else mTabViews.get(j).setIconAlpha(0);
+                                } else {
+                                    mTabViews.get(j).setIconAlpha(0);
+                                }
+                            }
+                        }
+                    }
+                }
             }
             //滑动时保存当前按钮索引
             mCurrentItem = position;
@@ -142,9 +157,9 @@ public class AlphaTabsIndicator extends LinearLayout {
         @Override
         public void onPageSelected(int position) {
             super.onPageSelected(position);
-            resetState();
-            mTabViews.get(position).setIconAlpha(1.0f);
-            mCurrentItem = position;
+//            resetState();
+//            mTabViews.get(position).setIconAlpha(1.0f);
+//            mCurrentItem = position;
         }
     }
 
@@ -159,8 +174,8 @@ public class AlphaTabsIndicator extends LinearLayout {
         @Override
         public void onClick(View v) {
             //点击前先重置所有按钮的状态
-            resetState();
-            mTabViews.get(currentIndex).setIconAlpha(1.0f);
+            //resetState();
+            //mTabViews.get(currentIndex).setIconAlpha(1.0f);
             if (null != mListner) {
                 mListner.onTabSelected(currentIndex);
             }
@@ -209,9 +224,9 @@ public class AlphaTabsIndicator extends LinearLayout {
                 return;
             }
             //重置所有按钮状态
-            resetState();
+            //resetState();
             //恢复点击的条目颜色
-            mTabViews.get(mCurrentItem).setIconAlpha(1.0f);
+            //mTabViews.get(mCurrentItem).setIconAlpha(1.0f);
             super.onRestoreInstanceState(bundle.getParcelable(STATE_INSTANCE));
         } else {
             super.onRestoreInstanceState(state);
